@@ -47,9 +47,20 @@ done
 # Functions group reusable commands. Arguments inside a function use $1, $2,
 # and so on, just like arguments passed to the script itself.
 say_goodbye() {
+	MY_NAME="Derik"
+	MY_AGE="31"
 	local PERSON="$1"
 	echo "Goodbye, $PERSON!"
+		NAME_LIST=("Alice" "Bob" "Charlie")
+	for NAME in "${NAME_LIST[@]}"; do
+	echo "Hello, $NAME!"
+	echo "My name is $MY_NAME and I am $MY_AGE years old."
+	done
+
 }
+
+
+
 
 say_goodbye "$NAME"
 
